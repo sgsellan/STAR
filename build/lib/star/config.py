@@ -21,7 +21,8 @@
 
 import os
 import sys
-path_to_star = '/Users/silviasellan/Dropbox/projects/neural-stochastic-psr/'
+# path_to_star = '/Users/silviasellan/Dropbox/projects/neural-stochastic-psr/'
+path_to_star = '/Users/sgsellan/Dropbox/projects/neural-stochastic-psr/'
 print(path_to_star)
 path_male_star = os.path.join(path_to_star,'data/star/male/model.npz')
 path_female_star = os.path.join(path_to_star,'data/star/female/model.npz')
