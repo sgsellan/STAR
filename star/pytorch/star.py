@@ -57,16 +57,16 @@ class STAR(nn.Module):
         self.num_betas = num_betas
 
         # Model sparse joints regressor, regresses joints location from a mesh
-        self.register_buffer('J_regressor', torch.cuda.FloatTensor(J_regressor))
+        self.register_buffer('J_regressor', torch.FloatTensor(J_regressor))
 
         # Model skinning weights
-        self.register_buffer('weights', torch.cuda.FloatTensor(star_model['weights']))
+        self.register_buffer('weights', torch.FloatTensor(star_model['weights']))
         # Model pose corrective blend shapes
-        self.register_buffer('posedirs', torch.cuda.FloatTensor(star_model['posedirs'].reshape((-1,93))))
+        self.register_buffer('posedirs', torch.FloatTensor(star_model['posedirs'].reshape((-1,93))))
         # Mean Shape
-        self.register_buffer('v_template', torch.cuda.FloatTensor(star_model['v_template']))
+        self.register_buffer('v_template', torch.FloatTensor(star_model['v_template']))
         # Shape corrective blend shapes
-        self.register_buffer('shapedirs', torch.cuda.FloatTensor(np.array(star_model['shapedirs'][:,:,:num_betas])))
+        self.register_buffer('shapedirs', torch.FloatTensor(np.array(star_model['shapedirs'][:,:,:num_betas])))
         # Mesh traingles
         self.register_buffer('faces', torch.from_numpy(star_model['f'].astype(np.int64)))
         self.f = star_model['f']

@@ -20,9 +20,12 @@
 # Ahmed A. A. Osman
 
 import os
-path_male_star = ''
-path_female_star = ''
-path_neutral_star = ''
+import sys
+path_to_star = '/Users/silviasellan/Dropbox/projects/neural-stochastic-psr/'
+print(path_to_star)
+path_male_star = os.path.join(path_to_star,'data/star/male/model.npz')
+path_female_star = os.path.join(path_to_star,'data/star/female/model.npz')
+path_neutral_star = os.path.join(path_to_star,'data/star/neutral/model.npz')
 
 data_type = 'float32'
 
